@@ -46,22 +46,41 @@
 
         </div>
 &&&&&&&&&&&&&&&&
-.childTwo{
-    width: 200px;
-    /* background-color:#ffb300; */
-    height: 100%;
-    padding: 10px;
-    position: relative;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    border: solid 2px #1b7261;
+  .parent a {
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .child{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        height: 2px;
+        background-color: aqua;
+        transition: all .2s;
+        visibility: hidden;
+    }
+.parent a:hover .child{
+    width: 50%;
+    bottom: 0;
+    right:0 ;
+    left: 50%;
+    overflow: hidden;
+    visibility: visible;
+}
+.parent a:hover{
+    color: aqua;
 }
 
-.parent:hover .childTwo{
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .3s ease-in-out;
-}
+<div class="parent text-center">
+               <a href="">Home
+                <div class="child"></div>
+               </a>
+ </div>
