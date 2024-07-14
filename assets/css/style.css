@@ -111,7 +111,7 @@
     background-color: transparent;
   }
 
-  .dropdown:hover .fa-chevron-down{
+  .dropdown:hover .navRotateIcon{
     transform: rotate(180deg);
     transition: all .5s;
   }
@@ -123,5 +123,53 @@
   nav .navHoverA:hover{
     color: var(--theme-1) !important;
   }
-  
+  /*  */
+  .parent{
+    width: 200px;
+    background-color:#051145;
+    /* height: 30px; */
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.childTwo{
+  width: 100%;
+  /* background-color:#ffb300; */
+  height: 100%;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  border: solid 2px #213f37;
+}
+
+.parent:hover .childTwo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .3s ease-in-out;
+}
+
+.child{
+    width: 100%;
+    height: 100%;
+    background-color:#1b7261;
+    position: absolute;
+    top: 0;
+    
+    bottom: 0;
+    right: 0;
+    transition: all .3s ease-in-out;
+    opacity: .5;
+}
+
+.parent:hover .child{
+    width: 0%;
+    /* transition: all .2s ease-in-out; */
+    cursor: pointer;
+}
+
  /* START NAVBAR SECTION  */
