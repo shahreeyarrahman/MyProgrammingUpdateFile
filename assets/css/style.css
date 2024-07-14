@@ -250,6 +250,11 @@
   display: none !important;
 }
 
+@media screen and (max-width:576px) {
+  .offcanvas{
+    width: 80% !important;
+  }
+}
 
 @media screen and (max-width:1200px) {
   .navbarOfcanvas{
