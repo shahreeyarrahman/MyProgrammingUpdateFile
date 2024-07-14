@@ -60,19 +60,20 @@
 /* END HEADER SECTION  */
  /* START NAVBAR SECTION  */
  nav{
-    background-color: rebeccapurple;
+    background-color: var(--common-white);
     box-shadow: var(--shadow);
+    width: 100%;
+    font-family: var(--primary-font) !important;
  }
  .flex-container {
     display: flex;
     align-items: stretch;
-    background-color: #e70000;
+    background-color:var(--common-white);
   }
 
-  /* homeDrop */
   .dropbtn {
     background-color: transparent;
-    color: white;
+    color:var(--common-black);
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -114,6 +115,13 @@
     transform: rotate(180deg);
     transition: all .5s;
   }
-  /* homeDrop */
+ 
+  nav button:hover{
+    color: var(--theme-1);
+  }
+  
+  nav .navHoverA:hover{
+    color: var(--theme-1) !important;
+  }
   
  /* START NAVBAR SECTION  */
