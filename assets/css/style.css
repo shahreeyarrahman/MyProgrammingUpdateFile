@@ -1,3 +1,11 @@
+/* font */
+
+@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -5,9 +13,9 @@
 }
 
 :root{
-    /* --ff-body: 'Libre Bodoni', sans-serif;
+    --ff-body: 'Libre Bodoni', sans-serif;
     --ff-h: 'Libre Bodoni', sans-serif;
-    --ff-s: 'sail', system-ui; */
+    --ff-s: 'sail', system-ui;
     --primary-font: 'Open Sans', sans-serif;
     --ff-fontawesome: "Font Awesome 6 Pro";
     --common-white: #fff;
@@ -19,6 +27,23 @@
     --theme-1: #1B7261;
     --border-1: #ebebeb;
     --shadow:0px 0px 10px rgba(0, 0, 0, 0.5) ;
+    --ff-p: 'Open Sans', sans-serif;
+
+    /*  
+    --rr-ff-body: 'Libre Bodoni', sans-serif;
+    --rr-ff-h: 'Libre Bodoni', sans-serif;
+    --rr-ff-s: 'sail', system-ui;
+    
+    --rr-ff-fontawesome: "Font Awesome 6 Pro";
+    --rr-common-white: #fff;
+    --rr-common-black: #000000;
+    --rr-grey-1: #f2f4f9;
+    --rr-grey-2: #203240;
+    --rr-text-body: #54595F;
+    --rr-heading-1: #051145;
+    --rr-theme-1: #1B7261;
+    --rr-border-1: #ebebeb;
+    */
 }
 
 /* START HEADER SECTION  */
@@ -58,6 +83,7 @@
     color: rgb(190, 190, 190) !important;
 }
 /* END HEADER SECTION  */
+
  /* START NAVBAR SECTION  */
  nav{
     background-color: var(--common-white);
@@ -265,7 +291,6 @@
   }
 }
 
-
 /* Navbar Responsive */
 
 @media screen and (max-width:1200px) {
@@ -293,4 +318,49 @@
   }
 }
 
- /* START NAVBAR SECTION  */
+ /* END NAVBAR SECTION  */
+
+ /* START HERO SECTION  */
+ #hero{
+  width: 100%;
+  min-height: 100vh;
+  /* background-color: #f6f8ff; */
+  background-color: rgb(182, 182, 182);
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ }
+ .herostyleFont{
+  font-family: var(--ff-s);
+  color: var(--theme-1);
+  font-size: 20px;
+ }
+ .heroHedingstyleFont{
+  font-family: var(--ff-h);
+  font-weight: 700;
+  font-size: clamp(30px, 4vw, 64px);
+  line-height: px;
+  color: var(--heading-1);
+  margin-bottom: 20px;
+  margin: 0;
+ }
+.herostyleFont2{
+  font-family: var(--ff-p);
+  font-weight: 400px;
+  font-size: 18px;
+  line-height: 28px;
+  color:#54595F ;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+/* .heroRowContentOne{
+  margin-top: 220px;
+}
+.heroRowContentTwo{
+  margin-top: 200px;
+  
+} */
+
+ /* END HERO SECTION  */
