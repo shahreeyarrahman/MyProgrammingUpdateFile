@@ -343,6 +343,8 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 
  }
  .herostyleFont{
@@ -352,11 +354,12 @@ header{
  }
  .heroHedingstyleFont{
     font-family: var(--ff-h);
-    font-size: clamp(25px , 4vw , 64px );
+    font-size: clamp(35px , 4vw , 60px );
     color: var(--heading-1);
     opacity: 0;
     transform: translateY(30px);
     animation: moveupheroHeading .5s linear forwards;
+    font-weight: 800;
  }
 
 @keyframes moveupheroHeading {
@@ -497,13 +500,168 @@ header{
 @media screen and (min-width:768px) {
   #hero{
     width: 100%;
-    min-height: 40vh;
+    min-height: 90vh;
     background-color: #f5f7ff;
     display: flex;
     justify-content: center;
     align-items: start;
-  
+   }   
+   .heroRowContentTwo img{
+    width: 70%;
+    float:right;
+    margin-top: 20px;
    }
+
+}
+ 
+@media screen and (max-width:768px) {
+  .heroRowContentOne{
+    width: 100% !important;
+   }
+   .heroRowContentTwo img{
+    width: 70%;
+    float:right;
+    
+   }
+}
+ /* start animaiton img  */
+
+ .heroRowContentTwo{
+  position: relative !important;
+}
+
+.heroCameraImg img{
+  width: 15% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: camera 1s infinite ease-in-out ;
+  animation-direction: alternate;
+}
+@keyframes camera {
+  0%{
+    transform: scale(.8);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+.heroFramImg{
+  width: 45%;
+  position: absolute;
+  top: 40%;
+  left: -100px;
+  animation: heroFramImg 2s infinite ease-in-out;
+  animation-direction: alternate;
+}
+
+
+@keyframes heroFramImg {
+    0%{
+      padding-top: 20px;
+      
+    }
+    50%{
+      padding-top: 0px;
+    }
+    80%{
+      padding-top: 20px;
+    }
+    100%{
+      padding-top: 0px;
+    }
+}
+
+@media screen and (max-width:768px) {
+  .heroCameraImg, .heroFramImg, .bannerImg{
+    display: none;
+  }
+  .heroRowContentTwo img {
+    width: 100%;
+  }
+}
+.bannerImg{
+  width: 40%;
+  position: absolute;
+  top: 100px;
+  right: -70px;
+  animation: bannerImg 2s infinite ease-in-out;
+  animation-direction: alternate;
+  animation-delay: 2s;
+}
+
+@keyframes bannerImg {
+  0%{
+    padding-top: 20px;
+    
+  }
+  50%{
+    padding-top: 0px;
+  }
+  80%{
+    padding-top: 20px;
+  }
+  100%{
+    padding-top: 0px;
+  }
+}
+
+@media screen and (max-width:1200px) {
+.bannerImg img {
+  display: none;
+}
+.leftSideAnimation, .rightSideAnimation{
+  display: none;
+}
+}
+
+.leftSideAnimation img{
+  width: 170px;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  animation: leftSideAnimationFlower 2s infinite ease-in-out;
+  animation-direction: alternate;
+  animation-delay: 1s;
+}
+@keyframes leftSideAnimationFlower {
+  0%{
+    padding-top: 20px;
+    
+  }
+  50%{
+    padding-top: 0px;
+  }
+  80%{
+    padding-top: 20px;
+  }
+  100%{
+    padding-top: 0px;
+  }
+}
+
+.rightSideAnimation img{
+  width: 170px;
+  position: absolute;
+  top: 70%;
+  right: 0;
+  animation: rightSideAnimationFlower 2s infinite ease-in-out;
+  animation-direction: alternate;
+  animation-delay: 2s;
+}
+@keyframes rightSideAnimationFlower {
+  0%{
+    padding-top: 20px;
+  }
+  50%{
+    padding-top: 0px;
+  }
+  80%{
+    padding-top: 20px;
+  }
+  100%{
+    padding-top: 0px;
+  }
 }
 
 
