@@ -338,13 +338,12 @@ header{
  /* START HERO SECTION  */
  #hero{
   width: 100%;
-  min-height: 100vh;
+  min-height: 70vh;
   background-color: #f5f7ff;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
 
  }
  .herostyleFont{
@@ -371,7 +370,7 @@ header{
 
 .herostyleFont2{
   font-family: var(--ff-p);
-  font-size: 18px;
+  font-size: clamp(5px, 1vw, 10px);
   color: #54595F;
 }
 
@@ -500,7 +499,7 @@ header{
 @media screen and (min-width:768px) {
   #hero{
     width: 100%;
-    min-height: 90vh;
+    min-height: 800px;
     background-color: #f5f7ff;
     display: flex;
     justify-content: center;
@@ -584,8 +583,8 @@ header{
   width: 40%;
   position: absolute;
   top: 100px;
-  right: -70px;
-  animation: bannerImg 2s infinite ease-in-out;
+  left: 65%;
+  animation: bannerImg 5s infinite ease-in-out;
   animation-direction: alternate;
   animation-delay: 2s;
 }
@@ -645,9 +644,9 @@ header{
   position: absolute;
   top: 70%;
   right: 0;
-  animation: rightSideAnimationFlower 2s infinite ease-in-out;
+  animation: rightSideAnimationFlower 5s infinite ease-in-out;
   animation-direction: alternate;
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 @keyframes rightSideAnimationFlower {
   0%{
@@ -664,13 +663,168 @@ header{
   }
 }
 
-
  /* END HERO SECTION  */
 
   /* START ABOUT SECTION  */
-#about{
+#aboutParent{
   width: 100%;
   min-height: 200vh;
   background-color: rgb(193, 193, 193);
 }
+.ScenerySection{
+  width: 100%;
+  min-height: 400px;
+  background-color: var(--common-white);
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  overflow: hidden;
+}
+.sceneryTextOne{
+  font-size: 20px;
+  color: var(--theme-1);
+  font-family: var(--ff-s);
+}
+.sceneryTextTwo{
+  font-size: clamp(30px, 4vw, 35px);
+  font-family: var(--ff-h);
+  color: var(--heading-1);
+}
+.sceneryTextThree{
+  font-size: 18px;
+  font-family: var(--ff-p);
+  color: #54595F;
+  font-weight:500;
+}
+/*about button  */
+
+.aboutBookNowButton {
+  width: 160px;
+  background-color: #051145;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.aboutBnBChildOne {
+  width: 100%;
+  height: 100%;
+  background-color: #1b7261;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.5;
+}
+
+.aboutBnBChildTwo {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  border: solid 2px #213f37;
+ 
+}
+
+.aboutBookNowButton:hover .aboutBnBChildOne {
+  width: 0%;
+  cursor: pointer;
+}
+
+.aboutBookNowButton:hover .aboutBnBChildTwo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.aboutBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width:1200px) {
+  .aboutSameTemplate{
+    width: 30%;
+  }
+  .abouteTextWrapper{
+    margin: 40px 0;
+  }
+}
+@media screen and (max-width:768px) {
+  .aboutSameTemplate{
+    width: 50%;
+  }
+  .abouteTextWrapper{
+    margin: 40px 0;
+  }
+}
+
+/* start counter section  */
+.counterWrapper{
+  width: 100%;
+  min-height: 250px;
+  background-color: var(--common-white) ;
+  box-shadow: var(--shadow);
+  margin-top: 30px;
+ overflow: hidden;
+ border-radius: 6px;
+
+}
+
+.counterRow{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.counterRow .counterLastChild{
+  border: none;
+}
+.counterOne{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  border-right: solid 2px rgb(212, 212, 212);
+  margin-top: 20px;
+}
+
+@media screen and (max-width:768px) {
+  .counterOne{
+    width: 50%;
+  }
+  .counterSecondChild{
+    border: none;
+  }
+}
+
+/* copy */
+
+.counterParent{
+  width: 200px;
+  font-family: var(--ff-h);
+  color: var(--theme-1);
+}
+.hedingText{
+  margin-top: 20px;
+}
+.hedingText p{
+  text-transform: capitalize;
+}
+.counterText{
+  font-family: var(--primary-font);
+  font-size: small;
+  color: var(--common-black);
+  font-weight:100 !important;
+}
+/* copy */
   /* END ABOUT SECTION  */

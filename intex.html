@@ -14,6 +14,8 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <script src="https://kit.fontawesome.com/07611e5823.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
 </head>
 
 <body>
@@ -291,10 +293,98 @@
     <!-- END HERO SECTION  -->
 
     <!-- START ABOUT SECTION  -->
-     <section id="about">
+     <section id="aboutParent">
+      <section id="aboutSection"> 
       <div class="container">
-        
+        <div class="ScenerySection">
+          <div class="row">
+            <div class="col-xl-3 text-center ">
+              <img class="aboutSameTemplate"  src="./assets/img/about-shape-img.png" alt="" width="100%">
+            </div>
+            <!--  -->
+            <div class="col-xl-6  text-center abouteTextWrapper">
+              <p class="sceneryTextOne">About Brulloft</p>
+              <p class="sceneryTextTwo">Unrivaled Scenery <br>
+                Unforgettable</p>
+              <p class="sceneryTextThree">
+                Our wedding planning and events coordination services are designed
+for Any Sized budget, meaning anyone. Our wedding planning and
+events coordination services are designed.
+              </p>
+              <!--  -->
+              <div class="aboutBtn text-center"> 
+                <div class="aboutBookNowButton text-center">
+                  <span class="fw-bold text-light fs-5">
+                    Book Now <i class="fa-solid fa-arrow-right"></i
+                  ></span>
+                  <div class=" aboutBnBChildOne"></div>
+                  <div class=" aboutBnBChildTwo"></div>
+                </div>
+            </div>
+              <!--  -->
+            </div>
+            <!--  -->
+            <div class="col-xl-3 text-center">
+              <img class="aboutSameTemplate" src="./assets/img/about-shape-img.png" alt="" width="100%">
+            </div>
+            <!--  -->
+
+          </div>
+        </div>
       </div>
+    </section>
+     <!-- start counter section  -->
+     <section id="counterSectionWrapper">
+      <div class="container">
+        <div class="counterWrapper">
+          <div class="row counterRow">
+            <div class=" counterOne ">
+              <div class="counterParent text-center">
+                <div class=" hedingText"> 
+                <p class="fs-1 my-1 connectCssClass">1200</p>
+                <p class="counterText">Happy Couples</p>
+            </div>
+            </div>
+            </div>
+            <!--  -->
+            <div class=" counterOne counterSecondChild ">
+              <div class="counterParent text-center">
+                <div class=" hedingText"> 
+                <p class="fs-1 my-1 connectCssClass">1545</p>
+                <p class="counterText">Weddings</p>
+            </div>
+            </div>
+            </div>
+            <!--  -->
+            <div class=" counterOne counterThirddChild ">
+              <div class="counterParent text-center">
+                <div class=" hedingText"> 
+                <div class="d-flex align-item-center">
+                <p class="fs-1 my-1 ps-5 connectCssClass">750</p>
+                <span><i class="fa-solid fa-plus mt-3 fs-4 ps-1"></i></span>
+              </div>
+                <p class="counterText">Decoration</p>
+            </div>
+            </div>
+            </div>
+            <!--  -->
+            <div class=" counterOne counterLastChild ">
+              <div class="counterParent text-center">
+                <div class=" hedingText"> 
+                  <div class="d-flex align-item-center">
+                    <p class="fs-1 my-1 ps-5 connectCssClass">265</p>
+                    <span><i class="fa-solid fa-plus mt-3 fs-4 ps-1"></i></span>
+                  </div>
+                <p class="counterText">Locations</p>
+            </div>
+            </div>
+            </div>
+            <!--  -->
+           
+          </div>
+        </div>
+      </div>
+     </section>
      </section>
     <!-- START ABOUT SECTION  -->
   </main>
@@ -311,6 +401,20 @@
     crossorigin="anonymous"></script>
   <!-- link js file  -->
   <script src="./assets/Js/app.js"></script>
+
+  <!-- ⁡⁢⁣⁢counter⁡ -->
+  <script src="./assets/Js/jquery.counterup.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+  
+  <!--  -->
+  <script>
+      $('.connectCssClass').counterUp({
+          delay: 10,
+          time: 1000
+      });
+  </script>
+<!-- ⁡⁢⁣⁢counter ⁡⁢⁣⁢END⁡⁡ -->
+
 </body>
 
 </html>
