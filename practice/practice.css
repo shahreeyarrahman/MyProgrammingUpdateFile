@@ -1,5 +1,69 @@
 
 
+.productCardWrapper{
+  width: 100%;
+  position: relative;
+}
+.productCard{
+  cursor: pointer;
+}
+
+.productBtn{
+  width: 100px;
+  background-color: red;
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+    transform: translateY(30px);
+    transition: all .2s ease-in-out;
+}
+
+.productBtn a{
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  display: block;
+  transition: all 2s ease-in-out;
+}
+
+  .productCard:hover .productBtn{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all .2s ease-in-out;
+  }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .aboutBookNowButton {
   width: 200px;
   background-color: #051145;
@@ -44,4 +108,4 @@
   top: 0;
   left: 0;
   transition: all 0.3s ease-in-out;
-}
+} */
