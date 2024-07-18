@@ -26,7 +26,9 @@
     --heading-1: #051145;
     --theme-1: #1B7261;
     --border-1: #ebebeb;
-    --shadow:0px 0px 10px rgba(0, 0, 0, 0.5) ;
+    --shadow:0px 0px 5px rgba(0, 0, 0, 0.3) ;
+    --shadow2: 5px 5px 15px 0px #0000001A;
+    ;
     --ff-p: 'Open Sans', sans-serif;
 
     /*  
@@ -669,7 +671,7 @@ header{
 #aboutParent{
   width: 100%;
   min-height: 200vh;
-  background-color: rgb(193, 193, 193);
+  background-color: var(--common-white);
 }
 .ScenerySection{
   width: 100%;
@@ -771,7 +773,7 @@ header{
   width: 100%;
   min-height: 250px;
   background-color: var(--common-white) ;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow2);
   margin-top: 30px;
  overflow: hidden;
  border-radius: 6px;
@@ -807,6 +809,9 @@ header{
   }
 }
 
+.connectCssClass{
+  font-weight: 800;
+}
 /* copy */
 
 .counterParent{
@@ -827,4 +832,75 @@ header{
   font-weight:100 !important;
 }
 /* copy */
+
+/* start wedding planing seciton  */
+#weddingPlaning{
+  width: 100%;
+  min-height: 100vh;
+  background-color:var(--common-white);
+  margin-top: 60px;
+  margin-bottom: 100px;
+  padding-bottom: 15px;
+}
+.planTextOne{
+  font-family: var(--ff-s);
+  color: var(--theme-1);
+  font-size: 20px;
+  padding-top: 15px;
+}
+.planTextTwo{
+  font-family: var(--ff-h);
+  font-size: clamp(35px , 4vw , 35px );
+  color: var(--heading-1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveupheroHeading .5s linear forwards;
+  font-weight: 800;
+}
+.planImgResize{
+  width: 160px ;
+  margin: auto;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.planCardTitle{
+  padding: 10px 0px;
+  font-family: var(--ff-h);
+  color: var(--theme-1);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.planCardTitle:hover{
+  color: var(--heading-1);
+  transition: all .2s ease-in-out;
+}
+
+.planCardText{
+  font-size: 18px;
+  font-family: var(--ff-p);
+  color: #54595F;
+  font-weight:500;
+}
+.planCardBtn{
+  color: var(--text-body);
+  transition: all .2s ;
+}
+.planCardBtn:hover{
+  color: var(--theme-1);
+  transition: all .2s ;
+}
+.planCardWrapper{
+  padding: 30px 0px;
+}
+
+.planCardShadow{
+  transition: all .5s ease-in-out;
+  border: none;
+}
+.planCardShadow:hover{
+  cursor: pointer;
+  box-shadow: var(--shadow2);
+  transition: all .3s ease-in-out;
+}
   /* END ABOUT SECTION  */
