@@ -670,7 +670,7 @@ header{
   /* START ABOUT SECTION  */
 #aboutParent{
   width: 100%;
-  min-height: 200vh;
+  min-height: 1200px;
   background-color: var(--common-white);
 }
 .ScenerySection{
@@ -836,11 +836,13 @@ header{
 /* start wedding planing seciton  */
 #weddingPlaning{
   width: 100%;
-  min-height: 100vh;
+  min-height: 800px;
   background-color:var(--common-white);
+  /* background-color: red; */
   margin-top: 60px;
   margin-bottom: 100px;
   padding-bottom: 15px;
+  position: relative;
 }
 .planTextOne{
   font-family: var(--ff-s);
@@ -903,4 +905,84 @@ header{
   box-shadow: var(--shadow2);
   transition: all .3s ease-in-out;
 }
+
+.aboutLeftSideAnimation img{
+  width: 150px;
+}
+
+.aboutLeftSideAnimation{
+  position: absolute;
+  top: 300px;
+  right: 0;
+  animation: aboutleftSideAnimation 2s infinite ease-in-out;
+  animation-direction: alternate;
+  animation-delay: 2s;
+}
+@keyframes aboutleftSideAnimation {
+  0%{
+    padding-top: 20px;
+  }
+  50%{
+    padding-top: 0px;
+  }
+  80%{
+    padding-top: 20px;
+  }
+  100%{
+    padding-top: 0px;
+  }
+}
+
+.aboutRightSideAnimation img{
+  width: 150px;
+}
+
+.aboutRightSideAnimation{
+  position: absolute;
+  bottom: 500px;
+  left: 0;
+  transform: rotate(180deg);
+  animation: aboutleftSideAnimation 2s infinite ease-in-out;
+  animation-direction: alternate;
+  animation-delay: 4s;
+}
+
+.aboutLeftSideAnimation2 img{
+  width: 190px;
+}
+
+
+.aboutLeftSideAnimation2{
+  position: absolute;
+  top:800px ;
+  left: 0;
+  animation: aboutLeftSideAnimation 2s infinite ease-in-out;
+  animation-direction: alternate;
+  animation-delay: 4s;
+  
+}
+
+@keyframes aboutLeftSideAnimation {
+  0%{
+    padding-top: 20px;
+  }
+  50%{
+    padding-top: 0px;
+  }
+  80%{
+    padding-top: 20px;
+  }
+  100%{
+    padding-top: 0px;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .aboutLeftSideAnimation,
+  .aboutRightSideAnimation,
+  .aboutLeftSideAnimation2{
+    display: none;
+  }
+}
+
   /* END ABOUT SECTION  */
