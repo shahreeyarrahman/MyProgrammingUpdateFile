@@ -286,8 +286,8 @@ header{
 }
 
 .offcanvasBtnColor{
-  background-color: var(--theme-1);
-  color: var(--common-white);
+  background-color: var(--theme-1) !important;
+  color: var(--common-white) !important;
 }
 .navbarOfcanvas{
   display: none !important;
@@ -306,6 +306,7 @@ header{
     top: 0;
     right: 0;
   }
+  
 }
 
 /* Navbar Responsive */
@@ -336,3 +337,26 @@ header{
 }
 
  /* END NAVBAR SECTION  */
+
+ /* add  */
+ .offcanvasBtnColor{
+  background-color: var(--theme-1) ;
+  color: var(--common-white);
+}
+
+@media screen and (max-width:1200px) {
+  nav .dropdown button  {
+    display: none !important;
+  }
+  .navHoverA{
+    display: none !important;
+  }
+  nav .droLine{
+    display: none !important;
+  }
+}
+@media screen and (max-width:768px) {
+ nav .navBtnWrapper{
+  display: none !important ;
+ }
+}
