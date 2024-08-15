@@ -342,6 +342,7 @@ header{
  .offcanvasBtnColor{
   background-color: var(--theme-1) ;
   color: var(--common-white);
+  display: none !important;
 }
 
 @media screen and (max-width:1200px) {
@@ -354,9 +355,25 @@ header{
   nav .droLine{
     display: none !important;
   }
+  .offcanvasBtnColor{
+    background-color: var(--theme-1) ;
+    color: var(--common-white);
+    display: block !important;
+  }
 }
+
 @media screen and (max-width:768px) {
  nav .navBtnWrapper{
   display: none !important ;
  }
+ 
+}
+
+/* add ofcanvas */
+
+.offcanvasDropParent ul li:hover a {
+  color: white !important;
+}
+.offcanvasDropParent .dropdown-menu {
+  width: 300px !important;
 }
