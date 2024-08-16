@@ -1,0 +1,266 @@
+/* Font link here  */
+
+@import url("https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* variabls */
+:root {
+  /* color  */
+  --common-white: #ffffff;
+  --common-black: #000000;
+  --primary-color-1: #ffbe34;
+  --primary-color-2: #091242;
+  --secondary-2: #f4f4f4;
+  --secondary-navy: rgba(9, 18, 66, 1);
+  --Heading-Font-color: #1c1f35;
+  --Paragraph-Font-color: #666c89;
+  --Gradiant-color: #ffb629, #ffda56, #ffd7a6;
+  --icon-bg-color: #273270;
+  --icon-border: 1px solid #4a57a1;
+  --shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.1);
+
+  /* font size  */
+  --heading-font-size-1: clamp(50px, 4vw, 65px);
+  --heading-font-size-2: clamp(20px, 4vw, 65px);
+  --heading-font-size-3: clamp(15px, 3vw, 50px);
+  --paragraph-font-size: clamp(10px, 2vw, 16px);
+  --semibold: 500;
+  --bold: 700;
+
+  /* font family  */
+  --primary-font-Rubik: "Rubik", sans-serif;
+  --secondary-font-Krub: "Krub", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* START SLIDER SECTION  */
+#slider {
+  width: 100%;
+  min-height: 70vh;
+  background-color:#FAFBFF;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.carousel {
+  margin: 50px auto;
+}
+.carousel .carousel-item {
+  color: #999;
+  overflow: hidden;
+  min-height: 120px;
+  font-size: 13px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 30px;
+  height: 30px;
+  background: #666;
+  text-shadow: none;
+  top: 4px;
+  text-decoration: none;
+}
+.carousel-control-prev i,
+.carousel-control-next i {
+  font-size: 16px;
+}
+.carousel-control-prev {
+  left: auto;
+  right: 40px;
+}
+.carousel-control-next {
+  left: auto;
+}
+.carousel-indicators {
+  bottom: -80px;
+}
+.carousel-indicators li,
+.carousel-indicators li.active {
+  width: 17px;
+  height: 17px;
+  border-radius: 0;
+  margin: 1px 5px;
+  box-sizing: border-box;
+}
+.carousel-indicators li {
+  background: #e2e2e2;
+  border: 4px solid #fff;
+  list-style-type: none;
+}
+.carousel-indicators li.active {
+  color: #fff;
+  background: var(--theme-1);
+  border: 5px double;
+  border-radius: 50%;
+}
+.star-rating li {
+  padding: 0 2px;
+}
+
+/* my css */
+.cardImgWrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.kathleenWraper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+.cardText h5 {
+  color: var(--theme-1);
+  font-weight: 600;
+  font-family: var(--ff-s);
+  font-size: 25px;
+}
+.cardText p {
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: var(--ff-s);
+}
+.cardText {
+  margin-left: 20px;
+}
+.img1 img {
+  border-radius: 50%;
+}
+
+.star-rating i {
+  font-size: 20px;
+  color: #ffdc12 !important;
+}
+.sliderCard {
+  padding: 15px !important;
+}
+.sliderCard .card-text {
+  font-size: 16px !important;
+  font-family: var(--ff-h);
+}
+
+/* END SLIDER SECTION  */
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  background: var(--theme-1);
+  text-shadow: none;
+  top: 4px;
+  margin-top: -51px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+}
+.carousel-control-prev i,
+.carousel-control-next i {
+  font-size: 10px;
+}
+.carousel-control-prev {
+  position: absolute !important;
+  top: 0 !important;
+  right: 50px !important;
+}
+
+.carousel-indicators {
+  margin-top: 400px !important;
+}
+
+/* add css */
+
+
+.jhonMartinText h5, .jhonP{
+  color: white !important;
+}
+
+.jhonMartin .sliderCard{
+  background: #091242 !important;
+  color: white !important;
+}
+
+.sliderParagraph {
+  background-color: #e8e8e8;
+  display: inline-block;
+  border-left: 6px solid var(--primary-color-1);
+  padding: 5px 10px;
+  font-family: var(--primary-font-Rubik);
+  font-weight: 400;
+  margin-top: 20px;
+  font-size: 15px;
+}
+.sliderContent h2 {
+  font-family: var(--primary-font-Rubik);
+  font-size: 30px;
+  font-weight: var(--semibold);
+}
+
+.img2 img {
+  max-width: 70px;
+  height: auto;
+}
+
+.kathleenSmith .sliderCard{
+  background: #F4F4F4 !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+.sliderCardText {
+  font-family: var(--secondary-font-Krub);
+font-size: 14px;
+font-style: italic;
+font-weight: 500;
+line-height: 24.24px;
+text-align: left;
+
+}
+
+
+@media screen and (max-width:767px) {
+  .img2 img {
+    max-width: 40px;
+    height: auto;
+  }
+  .jhonMartin{
+    margin-top: 20px !important;
+  }
+}
+
+/* Add wedding project css  */
+/* START CLIENTS SECTION  */
+
+.clientTextOne{
+  font-family: var(--ff-s);
+  color: var(--theme-1);
+  font-size: 20px;
+  padding-top: 15px;
+}
+.clientTextTwo{
+  font-family: var(--ff-h);
+  font-size: clamp(30px , 4vw , 45px );
+  color: var(--heading-1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveupClintHeading .5s linear forwards;
+  font-weight: 800;
+}
+@keyframes moveupClintHeading {
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/* END CLIENTS SECTION  */

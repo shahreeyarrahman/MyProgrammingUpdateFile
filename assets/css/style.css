@@ -28,7 +28,6 @@
     --border-1: #ebebeb;
     --shadow:0px 0px 5px rgba(0, 0, 0, 0.3) ;
     --shadow2: 5px 5px 15px 0px #0000001A;
-    ;
     --ff-p: 'Open Sans', sans-serif;
 
     /*  
@@ -259,32 +258,7 @@
     transform: scale(1);
   }
 }
-.heroFramImg{
-  width: 45%;
-  position: absolute;
-  top: 40%;
-  left: -100px;
-  animation: heroFramImg 2s infinite ease-in-out;
-  animation-direction: alternate;
-}
-
-
-@keyframes heroFramImg {
-    0%{
-      padding-top: 20px;
-      
-    }
-    50%{
-      padding-top: 0px;
-    }
-    80%{
-      padding-top: 20px;
-    }
-    100%{
-      padding-top: 0px;
-    }
-}
-
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 @media screen and (max-width:768px) {
   .heroCameraImg, .heroFramImg, .bannerImg{
     display: none;
@@ -382,7 +356,7 @@
   /* START ABOUT SECTION  */
 #aboutParent{
   width: 100%;
-  min-height: 1200px;
+  min-height: 100vh;
   background-color: var(--common-white);
 }
 .ScenerySection{
@@ -464,17 +438,17 @@
 }
 
 @media screen and (max-width:1200px) {
-  .aboutSameTemplate{
+  /* .aboutSameTemplate{
     width: 30%;
-  }
+  } */
   .abouteTextWrapper{
     margin: 40px 0;
   }
 }
 @media screen and (max-width:768px) {
-  .aboutSameTemplate{
+  /* .aboutSameTemplate{
     width: 50%;
-  }
+  } */
   .abouteTextWrapper{
     margin: 40px 0;
   }
@@ -552,7 +526,7 @@
   background-color:var(--common-white);
   /* background-color: red; */
   margin-top: 60px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   padding-bottom: 15px;
   position: relative;
 }
@@ -959,35 +933,7 @@
 }
   /*  END TEAM SECTION   */
 
-  /* START CLIENTS SECTION  */
-  #client{
-    width: 100%;
-    min-height: 70vh;
-    background-color: #6ce7cf;
-    margin-bottom: 50px;
-  }
-  .clientTextOne{
-    font-family: var(--ff-s);
-    color: var(--theme-1);
-    font-size: 20px;
-    padding-top: 15px;
-  }
-  .clientTextTwo{
-    font-family: var(--ff-h);
-    font-size: clamp(30px , 4vw , 45px );
-    color: var(--heading-1);
-    opacity: 0;
-    transform: translateY(30px);
-    animation: moveupClintHeading .5s linear forwards;
-    font-weight: 800;
-  }
-  @keyframes moveupClintHeading {
-    100%{
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-  /* END CLIENTS SECTION  */
+  
 
    /* START SPECIAL DAY SECTION  */
    #specialDay{
@@ -1183,3 +1129,155 @@
     font-family: var(--ff-s);
    }
    /* END COPYRIGHT SECTION  */
+
+
+
+   /* add  hero section css  */
+
+   .leftMiddleSideAnimation img {
+    position: absolute;
+    top: 70px ;
+    left: 190px ;
+    animation: leftMiddleSideAnimation 1s infinite ;
+    animation-direction: alternate;
+   }
+
+   @keyframes leftMiddleSideAnimation {
+    0%{
+      transform: rotate(20deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
+  }
+  
+  @media screen and (max-width:1200px) {
+    .leftMiddleSideAnimation img {
+      display: none;
+     }
+  
+  }
+
+  
+
+.heroFramImg {
+  background: url(../img/fram-animation-img.png) no-repeat;
+  width: 270px;
+  min-height: 400px;
+  background-size: cover;
+  /* position: relative; */
+  /* border-radius: 200px; */
+  background-size: contain;
+  background-position: right;
+  
+}
+
+.heroFramImg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(28%, 11% );
+  background: url(../img/hero-animation-cuple-img\ .png) no-repeat;
+  width: 73%;
+  min-height: 87%;
+  background-size: 100%;
+  background-position: right;
+  border-radius: 200px ;
+  
+  
+  
+}
+@keyframes others {
+  0% {
+    padding-top: 20px;
+  }
+  50% {
+    padding-top: 0px;
+  }
+  80% {
+    padding-top: 20px;
+  }
+  100% {
+    padding-top: 0px;
+  }
+}
+
+.heroFramImg{
+  /* width: 45%; */
+  position: absolute;
+  top: 40%;
+  left: -70px;
+  animation: heroFramImg 2s infinite ease-in-out;
+  animation-direction: alternate;
+}
+
+
+@keyframes heroFramImg {
+    0%{
+      padding-top: 20px;
+      
+    }
+    50%{
+      padding-top: 0px;
+    }
+    80%{
+      padding-top: 20px;
+    }
+    100%{
+      padding-top: 0px;
+    }
+}
+.aboutFarmOne{
+  background: url(../img/about/about-fram-woman-img.png) no-repeat;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutFarmOne::before {
+  content: "";
+  background: url(../img/about/about-shape-img.png) no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+
+}
+.aboutFarmTwo{
+  background: url(../img/about/about-fram-man-img.png) no-repeat;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.aboutFarmTwo::before {
+  content: "";
+  background: url(../img/about/about-shape-img.png) no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+
+}
+
+@media screen and (max-width:1200px) {
+  .aboutFarmOne {
+    width: 100% !important;
+    min-height: 350px ;
+    display: block;
+  }
+  .aboutFarmTwo {
+    width: 100% !important;
+    min-height: 350px ;
+    display: block;
+    
+  }
+}
