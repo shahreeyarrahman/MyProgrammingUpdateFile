@@ -1025,17 +1025,17 @@
    /* START FOOTER SECTION  */
    #footer{
     width: 100%;
-    min-height: 50vh;
+    min-height: 45vh;
     background-color: var(--theme-1);
     display: flex;
     align-items: center;
     align-content: center;
    }
    .colWrapper{
-    padding: 20px;
+    padding: 0px 0px 0px 20px;
    }
    .footerColumnOne p {
-    font-size: 18px;
+    font-size: 16px;
     font-family: var(--primary-font);
     color: var(--common-white);
     margin-bottom: 50px ;
@@ -1070,11 +1070,11 @@
    }
 
    .footerColumnTwo li a {
-    font-size: 17px;
+    font-size: 16px;
     font-family: var(--primary-font);
     text-decoration: none;
     color:var(--common-white);
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
     padding: 8px 0px ;
     display: block;
   
@@ -1281,3 +1281,4 @@ height: 100%;
     
   }
 }
+
