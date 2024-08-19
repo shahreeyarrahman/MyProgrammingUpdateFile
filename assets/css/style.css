@@ -559,6 +559,10 @@
   font-weight: 700;
 }
 
+.planCardBody {
+  padding: 0 !important;
+}
+
 .planCardTitle:hover{
   color: var(--heading-1);
   transition: all .2s ease-in-out;
@@ -686,6 +690,7 @@
   font-family: var(--ff-h);
   color: var(--theme-1);
   font-weight: 800;
+  margin: 10px 0px !important;
 }
 
 .productCardText{
@@ -750,7 +755,7 @@
   width: 100%;
   height: 40vh;
   background-position: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   background-attachment: fixed;
   background-size: cover;
  }
@@ -1031,17 +1036,15 @@
     align-items: center;
     align-content: center;
    }
-   .colWrapper{
-    padding: 0px 0px 0px 20px;
-   }
+   
    .footerColumnOne p {
     font-size: 16px;
     font-family: var(--primary-font);
     color: var(--common-white);
-    margin-bottom: 50px ;
+    margin-bottom: 30px ;
    }
    .footerColumnOne img {
-    margin-bottom: 30px ;
+    margin-bottom: 20px ;
    }
    .footerColumnOne i{
     font-size: 15px;
@@ -1049,7 +1052,7 @@
     padding: 10px ;
     background-color: var(--common-white);
     border-radius: 50%;
-    margin:0px 5px;
+    margin:0px 8px;
     color: var(--common-black) !important;
     transition: .5s ease-in-out;
    }
@@ -1061,6 +1064,9 @@
     display: flex;
     align-items: center;
     align-content: center;
+   }
+   .footerIconWrapper span{
+    margin-right: 10px ;
    }
    .footerColumnTwo h5 {
     font-family: var(--ff-h);
@@ -1113,6 +1119,10 @@
 
    .footerColumnThree li a:hover {
     color:var(--heading-1);
+   }
+
+   @media screen and (max-width:992px) {
+    
    }
    /* END FOOTER SECTION  */
 
