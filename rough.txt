@@ -1,267 +1,297 @@
+/* font */
+
+@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
 
 
-/* START HEADER SECTION  */
-
-header{
-  position: sticky !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100%;
-    z-index: 999;
-}
-#header{
-    background-color: var(--heading-1);
-    color: var(--common-white);
+*{
     margin: 0;
-    padding-top: 10px;
-    width: 100%;
-    height: auto;
-    font-family: var(--primary-font) !important;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --ff-body: 'Libre Bodoni', sans-serif;
+    --ff-h: 'Libre Bodoni', sans-serif;
+    --ff-s: 'sail', system-ui;
+    --primary-font: 'Open Sans', sans-serif;
+    --ff-fontawesome: "Font Awesome 6 Pro";
+    --common-white: #fff;
+    --common-black: #000000;
+    --grey-1: #f2f4f9;
+    --grey-2: #203240;
+    --text-body: #54595F;
+    --heading-1: #051145;
+    --theme-1: #1B7261;
+    --border-1: #ebebeb;
+    --shadow:0px 0px 5px rgba(0, 0, 0, 0.3) ;
+    --shadow2: 5px 5px 15px 0px #0000001A;
+    --ff-p: 'Open Sans', sans-serif;
+
+    /*  
+    --rr-ff-body: 'Libre Bodoni', sans-serif;
+    --rr-ff-h: 'Libre Bodoni', sans-serif;
+    --rr-ff-s: 'sail', system-ui;
     
-   
-}
-.icone i{
-    font-size:20px;
-    background-color: var(--common-white);
-    border-radius: 50%;
-    padding: 10px;
-    color: black;
-    transition: all .4s ease-in-out;
-}
-.icone i:hover{
-    background-color:var(--theme-1);
-    color: var(--common-white);
-}
-.headerBtn i{
-    transition: .4s;
-}
-.headerBtn.active i{
-    transform: rotate(180deg);
-}
-@media screen and (max-width:1200px) {
-    #header {
-        display: none;
-    }  
-}
-.Headerhovereffect:hover{
-    color: rgb(190, 190, 190) !important;
-} */
-/* END HEADER SECTION 
-
- /* START NAVBAR SECTION  */
- 
- nav{
-    background-color: var(--common-white);
-    box-shadow: var(--shadow);
-    width: 100%;
-    font-family: var(--primary-font) !important;
-    padding: 15px;
-    position: sticky !important;
-    top: 0 !important;
-    left: 0 !important;
-    z-index: 99 !important;
- }
- .flex-container {
-    display: flex;
-    align-items: stretch;
-    background-color:var(--common-white);
-  }
-
-  .dropbtn {
-    background-color: transparent;
-    color:var(--common-black);
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #000000;
-    min-width: 190px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    animation: animated .3s ease-in-out;
-    border-top: 5px solid var(--theme-1);
-    overflow: hidden;
-    
-  }
-  @keyframes animated {
-    0%{
-      height: 0;
-    }
-    100%{
-      height: 125px;
-    }
-
-  }
-  .dropdownContent2 {
-    display: none;
-    position: absolute;
-    background-color: #000000;
-    min-width: 190px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    animation: animated2 .3s ease-in-out;
-    border-top: 5px solid var(--theme-1);
-    
-  }
-  @keyframes animated2 {
-    0%{
-      height: 0;
-    }
-    100%{
-      height: 205px;
-    }
-  }
-
-  .dropdownContent3 {
-    display: none;
-    position: absolute;
-    background-color: #000000;
-    min-width: 190px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    animation: animated3 .3s ease-in-out;
-    border-top: 5px solid var(--theme-1);
-    /* animation-direction: ; */
-  }
-  @keyframes animated3 {
-    0%{
-      height: 0;
-    }
-    100%{
-      height: 405px;
-    }
-  }
-
-  .dropdown-content a {
-    color: rgb(255, 255, 255);
-    padding: 8px 10px;
-    text-decoration: none;
-    display: block;
-    padding-left: 20px;
-  }
-  
-  .dropdown-content a:hover {background-color: var(--theme-1);}
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: transparent;
-  }
-
-  .dropdown:hover .navRotateIcon{
-    transform: rotate(180deg);
-    transition: all .5s;
-  }
- 
-  nav button:hover{
-    color: var(--theme-1);
-  }
-  
-  nav .navHoverA:hover{
-    color: var(--theme-1) !important;
-  }
-  
-  .navBtnWrapper{
-    width: 200px;
-    background-color:#051145;
-    padding: 10px;
-    position: relative;
-    cursor: pointer;
+    --rr-ff-fontawesome: "Font Awesome 6 Pro";
+    --rr-common-white: #fff;
+    --rr-common-black: #000000;
+    --rr-grey-1: #f2f4f9;
+    --rr-grey-2: #203240;
+    --rr-text-body: #54595F;
+    --rr-heading-1: #051145;
+    --rr-theme-1: #1B7261;
+    --rr-border-1: #ebebeb;
+    */
 }
 
-.navBtnChildTwo{
+
+
+/* start aboute hero section  */
+#aboutOfHero{
   width: 100%;
-  height: 100%;
-  padding: 10px;
+  height: 450px;
+  background-color: #f5f7ff;
   position: relative;
-  cursor: pointer;
-  position: absolute;
-  top: 5px;
-  left: 8px;
-  border: solid 2px #213f37;
+  margin-bottom: 100px !important;
+
 }
 
-.navBtnWrapper:hover .navBtnChildTwo{
+#animationImgOne img:nth-child(1){
   position: absolute;
-  top: 0;
   left: 0;
-  transition: all .3s ease-in-out;
+  bottom: 0;
+  animation: imgOne 2s ease-in-out infinite ;
+  animation-direction: alternate;
+}
+#animationImgOne img:nth-child(2){
+  position: absolute;
+  top: -100px ;
+  right: -20px;
+  animation: imgTwo 2s ease-in-out infinite ;
+  animation-direction: alternate;
 }
 
-.navBtnChildOne{
-    width: 100%;
-    height: 100%;
-    background-color:#1b7261;
-    position: absolute;
-    top: 0;
-    
-    bottom: 0;
-    right: 0;
-    transition: all .3s ease-in-out;
-    opacity: .5;
+@keyframes imgOne {
+  0%{
+  left: 20px;
+  bottom: 5px;
+  }
+  50%{
+  left: -5px;
+  bottom: 0px;
+  }
+  100%{
+  left: 0px;
+  bottom: 0px;
+  }
+}
+@keyframes imgTwo {
+  0%{
+    top: -100px;
+    right: -80px;
+  }
+  100%{
+    top: -90px;
+    right: -80px;
+  }
 }
 
-.navBtnWrapper:hover .navBtnChildOne{
-    width: 0%;
-    cursor: pointer;
+.aboutContainer{
+  height: 100% !important;
+  display: grid;
+  place-items: center ;
+  position: relative;
 }
 
-/* ofcanvas */
-.navbarOfcanvas ul li a:hover{
-  background: var(--theme-1);
-  
+.aboutContainer span:nth-child(1){
+  position: absolute;
+  left: 0;
+  top: 100px ;
+  animation: inlineImgOne 2s ease-in-out infinite ;
+  animation-direction: alternate;
+}
+.aboutContainer span:nth-child(2){
+  position: absolute;
+  top: 20px ;
+  right: 50px;
+  animation: inlineImgTwo 2s ease-in-out infinite ;
+  animation-direction: alternate;
 }
 
-.offcanvasContent p{
-  cursor: pointer;
+@keyframes inlineImgOne {
+  0%{
+    transform: rotate(-30deg);
+  }
+  100%{
+  transform: rotate(0deg);
+  }
+}
+@keyframes inlineImgTwo {
+  0%{
+    transform: rotate(-30deg);
+  }
+  100%{
+  transform: rotate(0deg);
+  }
 }
 
-.offcanvasSocialIcone a {
-  font-size: 30px;
-  padding: 10px;
-  color: #fff;
-
+.aboutContainer h1{
+    font-family: var(--ff-h);
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(40px, 3vw, 64px);
+    line-height: 80px;
+    text-align: center;
+    color: #051145;
+    text-transform: capitalize;
+    margin-bottom: 20px;
 }
-.offcanvasSocialIcone a:hover {
+
+#smallText a,cite{
+  text-decoration: none ;
+     font-family: var(--rr-ff-p);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: var(--text-body);
+    margin: 0 2px;
+}
+#smallText a:hover,
+#smallText a.active{
   color: var(--theme-1);
 }
 
-.offcanvasBtnColor{
-  background-color: var(--theme-1);
-  color: var(--common-white);
-}
-.navbarOfcanvas{
-  display: none !important;
+#smallText {
+  text-align: center ;
 }
 
-@media screen and (max-width:576px) {
-  .offcanvas{
-    width: 80% !important;
+@media screen and (max-width:1200px){
+  #animationImgOne,#aboutOfHero{
+    display: none !important;
+  }
+}
+/* end aboute hero section  */
+
+
+/* start counter section  */
+.counterWrapper{
+  width: 100%;
+  min-height: 250px;
+  background-color: var(--common-white) ;
+  box-shadow: var(--shadow2);
+  margin-top: 30px;
+ overflow: hidden;
+ border-radius: 6px;
+
+}
+
+.counterRow{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.counterRow .counterLastChild{
+  border: none;
+}
+.counterOne{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  border-right: solid 2px rgb(212, 212, 212);
+  margin-top: 20px;
+}
+
+@media screen and (max-width:768px) {
+  .counterOne{
+    width: 50%;
+  }
+  .counterSecondChild{
+    border: none;
   }
 }
 
-@media screen and (max-width:1200px) {
-  .navbarOfcanvas{
-    display: block !important;
-    position: absolute;
-    top: 0;
-    right: 0;
+.connectCssClass{
+  font-weight: 800;
+}
+/* copy */
+
+.counterParent{
+  width: 200px;
+  font-family: var(--ff-h);
+  color: var(--theme-1);
+}
+.hedingText{
+  margin-top: 20px;
+}
+.hedingText p{
+  text-transform: capitalize;
+}
+.counterText{
+  font-family: var(--primary-font);
+  font-size: small;
+  color: var(--common-black);
+  font-weight:100 !important;
+}
+/* copy */
+
+/* end counter section  */
+
+
+
+html  
+
+     <!-- START HERO SECTION  -->
+    <section id="aboutOfHero">
+      <div id="animationImgOne">
+        <img src="./assets/img/aboutSection-img/imgOne.png" alt="">
+        <img src="./assets/img/aboutSection-img/imgTwo.png" alt="">
+      </div>
+      <div class="container aboutContainer">
+       
+        <span>
+          <img src="./assets/img/aboutSection-img/inline-img (1).png" alt="">
+        </span>
+        
+        <span>
+        <img src="./assets/img/aboutSection-img/inline-img (2).png" alt="">
+        </span>
+
+        <div id="aboutHeadingText">
+          <h1>About</h1>
+          <div id="smallText">
+            <a class="active" href="#">Brulloft</a>
+            <cite>></cite>
+            <a href="#">About</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END HERO SECTION  -->
+
+  
+
+  for btn 
+
+  @media screen and (max-width:768px) {
+ nav .navBtnWrapper{
+  display: none !important ;
+ }
+ 
+}
+
+@media screen and (max-width:768px) {
+  .navBtnWrapper{
+    display: none !important;
   }
 }
 
-/* Navbar Responsive */
 
 @media screen and (max-width:1200px) {
   .navResponsive{
@@ -282,191 +312,15 @@ header{
   }
 }
 
-@media screen and (max-width:768px) {
-  .navBtnWrapper{
-    display: none !important;
-  }
-}
-
- /* END NAVBAR SECTION  */
-
-
-
-
-
- blog slider one ////////////////////
-
- <div class="item">
-                <!--  -->
-              <div class="blogCardWrapper">
-              <!-- card 2  -->
-              <div class="card blogCardShadow" style="width: 100%;">
-                <div class="blogcardimg">
-                  <img src="./assets/img/blog/blog-1.jpg" class="card-img-top " alt="...">
-                </div>
-                <div class="card-body  blogCardBody">
-                  <div class="Blogicon">
-                    <div class="spanParent"> 
-                    <span> <i class="fa-regular fa-user"></i><a href="#">Brulloft</a></span>
-                    <span><i class="fa-regular fa-message"></i><a href="#">No comments </a></span>
-                  </div>
-                  <div class="date">
-                    <p class="datep1">04</p>
-                    <p class="datep2">May</p>
-                  </div>
-                  </div>
-                  <p class="card-text blogCardText"> tips for choosing the right wedding </p>
-                  <a href="#" class="btn fw-medium blogCardBtn">Read More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-              </div>
-              <!-- -->
-
-            </div>
-          
-              </div>
-
-
-
-
-
-
-
-slider css /////////////////////
-
-
- /* add slider css */
- .item {
-  background: #4a90e2;
-  color: #fff;
-  /* padding: 30px;
-  margin: 10px; */
-  text-align: center;
-  
+.navBtnWrapper:hover .navBtnChildOne{
+    width: 0%;
+    cursor: pointer;
 }
 
 
-.blogCardShadow{
-  text-align: start !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer !important;
 
-}
-
-.blogcardimg::before{
-  content: "";
-  background-color: rgba(255, 255, 255, 0.2);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 62%;
-  z-index: 9 !important;
-  transform: scalex(0);
-  transition: .4s ease-in-out;
-}
-
-.blogCardShadow:hover .blogcardimg::before{    
-    transform: scalex(1);
-    
-}
-
-.blogCardShadow img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: .2s ease-in-out;
-  position: relative;
-}
-
-.blogCardShadow:hover img {
-  transform: scale(1.05);
-  
-}
-
-.blogcardimg img{
-}
-
-.Blogicon{
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between ;
-}
-
-.Blogicon i {
-  padding: 0px 10px ;
-  color: var(--theme-1) !important;
-}
-.Blogicon .spanParent {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap !important;
-}
-
-.date{
-  
-  background:var(--theme-1);
-  color: white ;
-  padding: 2px 10px ;
-  text-align: center;
-  margin-top: -70px !important;
-  z-index: 99 !important;
- 
-}
-.date P{
-  padding: 0 !important;
-  margin: 0 !important;
-  background:var(--theme-1);
-  color: white ;
-  display: block;
-  font-size: 14px ;
-}
-.date .datep1{
-  font-size: 25px ;
-  font-weight: bold;
-}
-
-.spanParent a {
-  text-decoration: none;
-  color: #616161;
-  transition: .2s ease-in-out;
-}
-.spanParent a:hover {
-  text-decoration: none;
-  color: var(--theme-1);
-}
-
-.blogCardText{
-  text-transform: capitalize;
-  font-size: clamp(20px,20vw,25px);
-  color: var(--theme-1);
-  font-family: var(--ff-h);
-  margin: 15px 0px 0px  0px !important;
-}
-
-.blogCardBtn{
-  padding: 8px 0px ;
-  margin: 0;
-  text-decoration: none !important;
-  color: #616161;
-  font-family: var(--ff-h);
-}
-.blogCardBtn:hover{
-  color: var(--theme-1) !important;
-}
-.blogCardBtn i{
-  padding-left: 5px !important;
-  transition: .2s ease-in-out;
-}
-.blogCardBtn:hover i{
-  padding-left: 20px !important;
-}
-
-/* .blogCardBody {
-  padding: 20px  30px !important;
-} */
-
+    --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+    --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+    --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+    --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+    --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
